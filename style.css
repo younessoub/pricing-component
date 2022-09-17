@@ -157,7 +157,7 @@ main .downColor {
   height: 40px;
   border-radius: 50%;
   border: 0;
-  background-image: url("../images/icon-slider.svg"), linear-gradient(hsl(174deg, 86%, 45%), hsl(174deg, 86%, 45%));
+  background-image: url("./images/icon-slider.svg"), linear-gradient(hsl(174deg, 86%, 45%), hsl(174deg, 86%, 45%));
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
@@ -165,7 +165,7 @@ main .downColor {
   box-shadow: 0 10px 30px hsl(174deg, 86%, 45%);
 }
 .mainContent .card .flexContainer .slider::-webkit-slider-thumb:hover {
-  background-image: url("../images/icon-slider.svg"), linear-gradient(hsl(174deg, 86%, 35%), hsl(174deg, 86%, 35%));
+  background-image: url("./images/icon-slider.svg"), linear-gradient(hsl(174deg, 86%, 35%), hsl(174deg, 86%, 35%));
 }
 .mainContent .card .flexContainer .price {
   display: flex;
