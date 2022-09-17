@@ -1,0 +1,322 @@
+/*(Full Slider Bar)*/
+/*(Slider Backround)*/
+/*(Discount Background)*/
+/*(Discount Text)*/
+/*(CTA Text)*/
+/*(Pricing Component Background)*/
+/*(Main Background)*/
+/*(Empty Slider Bar)*/
+/*(Toggle Background)*/
+/*(Text)*/
+/*(Text & CTA Background)*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Manrope", sans-serif;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+main {
+  position: relative;
+}
+main .upColor,
+main .downColor {
+  height: 50vh;
+}
+main .upColor {
+  background-color: hsl(224deg, 65%, 95%);
+  border-bottom-left-radius: 8rem;
+}
+main .downColor {
+  background-color: hsl(230deg, 100%, 99%);
+}
+
+.mainContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 33rem;
+  text-align: center;
+}
+.mainContent .mainText {
+  background: url("../images/pattern-circles.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 3rem 0;
+}
+.mainContent .mainText h1 {
+  font-size: 1.8rem;
+  color: hsl(227deg, 35%, 25%);
+  margin-bottom: 1rem;
+}
+.mainContent .mainText p {
+  color: hsl(225deg, 20%, 60%);
+}
+.mainContent .card {
+  padding: 20px 30px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0px 1px 80px rgb(155, 152, 152);
+  overflow: hidden;
+}
+.mainContent .card .flexContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.mainContent .card .flexContainer .viewsContainer .pageViews {
+  color: hsl(225deg, 20%, 60%);
+  margin-bottom: 30px;
+}
+@media (min-width: 700px) {
+  .mainContent .card .flexContainer .viewsContainer .pageViews {
+    margin-bottom: 0;
+  }
+}
+.mainContent .card .flexContainer .viewsContainer .price.desktop {
+  display: none;
+}
+@media (min-width: 700px) {
+  .mainContent .card .flexContainer .viewsContainer .price.desktop {
+    display: flex;
+    align-items: center;
+  }
+}
+@media (min-width: 700px) {
+  .mainContent .card .flexContainer .viewsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+}
+.mainContent .card .flexContainer .slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  margin-bottom: 30px;
+  background: hsl(224deg, 65%, 95%);
+  border-radius: 30px;
+  background-image: linear-gradient(hsl(174deg, 77%, 80%), hsl(174deg, 77%, 80%));
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+}
+.mainContent .card .flexContainer .slider::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+.mainContent .card .flexContainer .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 0;
+  background-image: url("../images/icon-slider.svg"), linear-gradient(hsl(174deg, 86%, 45%), hsl(174deg, 86%, 45%));
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  box-shadow: 0 10px 30px hsl(174deg, 86%, 45%);
+}
+.mainContent .card .flexContainer .slider::-webkit-slider-thumb:hover {
+  background-image: url("../images/icon-slider.svg"), linear-gradient(hsl(174deg, 86%, 35%), hsl(174deg, 86%, 35%));
+}
+.mainContent .card .flexContainer .price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: hsl(225deg, 20%, 60%);
+  order: 1;
+}
+.mainContent .card .flexContainer .price span {
+  color: hsl(227deg, 35%, 25%);
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+@media (min-width: 700px) {
+  .mainContent .card .flexContainer .price {
+    display: none;
+  }
+}
+.mainContent .card .billing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: hsl(225deg, 20%, 60%);
+  font-size: 0.8rem;
+}
+.mainContent .card .billing .switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  margin-inline: 10px;
+}
+.mainContent .card .billing .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.mainContent .card .billing .switch input:checked + .slider {
+  background-color: hsl(174deg, 86%, 45%);
+}
+.mainContent .card .billing .switch input:checked + .slider:before {
+  -webkit-transform: translateX(22px);
+  -ms-transform: translateX(22px);
+  transform: translateX(22px);
+}
+@media (min-width: 700px) {
+  .mainContent .card .billing .switch input:hover + .slider {
+    background-color: hsl(174deg, 77%, 80%);
+  }
+}
+.mainContent .card .billing .switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.mainContent .card .billing .switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.mainContent .card .billing .switch .slider.round {
+  border-radius: 34px;
+}
+.mainContent .card .billing .switch .slider.round:before {
+  border-radius: 50%;
+}
+.mainContent .card .billing .yearly {
+  position: relative;
+}
+.mainContent .card .billing .yearly::before {
+  position: absolute;
+  content: "-25%";
+  background-color: hsl(14deg, 92%, 95%);
+  color: hsl(15deg, 100%, 70%);
+  border-radius: 100px;
+  height: 20px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: -45px;
+  font-size: 10px;
+}
+@media (min-width: 700px) {
+  .mainContent .card .billing .yearly::before {
+    content: "25% discount";
+    width: 100px;
+    right: -105px;
+  }
+}
+.mainContent .card hr {
+  margin: 30px -40px;
+  border: 1px solid rgb(240, 235, 235);
+}
+.mainContent .card .cta .features .feature {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.mainContent .card .cta .features .feature img {
+  margin-right: 15px;
+  width: 12px;
+}
+.mainContent .card .cta .features .feature p {
+  color: hsl(225deg, 20%, 60%);
+  font-size: 14px;
+}
+@media (min-width: 700px) {
+  .mainContent .card .cta .features .feature {
+    justify-content: left;
+  }
+}
+.mainContent .card .cta button {
+  background-color: hsl(227deg, 35%, 25%);
+  color: hsl(226deg, 100%, 87%);
+  height: 50px;
+  min-width: 180px;
+  margin-top: 30px;
+  border-radius: 200px;
+}
+.mainContent .card .cta button:hover {
+  color: white;
+}
+@media (min-width: 700px) {
+  .mainContent .card .cta button {
+    margin-top: 0;
+  }
+}
+@media (min-width: 700px) {
+  .mainContent .card .cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 700px) {
+  .mainContent .card {
+    padding: 20px 40px;
+  }
+}/*# sourceMappingURL=style.css.map */
